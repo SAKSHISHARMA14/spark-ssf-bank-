@@ -1,0 +1,98 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 13, 2021 at 01:25 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ssf`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transection`
+--
+
+CREATE TABLE `transection` (
+  `sid` int(4) NOT NULL,
+  `sac` varchar(10) NOT NULL,
+  `sna` varchar(20) NOT NULL,
+  `rid` int(4) NOT NULL,
+  `rac` varchar(10) NOT NULL,
+  `rna` varchar(20) NOT NULL,
+  `amt` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transection`
+--
+
+INSERT INTO `transection` (`sid`, `sac`, `sna`, `rid`, `rac`, `rna`, `amt`) VALUES
+(1000, '12345678', 'Sakshi Sharma', 1001, '23456781', 'Rashi Sharma', 2000),
+(1001, '23456781', 'Rashi Sharma', 300, '34567812', 'Ansh Sharma', 500),
+(1000, '12345678', 'Sakshi Sharma', 1001, '23456781', 'Rashi Sharma', 34),
+(1000, '12345678', 'Sakshi Sharma', 1002, '34567812', 'Ansh Sharma', 500),
+(1000, '12345678', 'Sakshi Sharma', 1001, '23456781', 'Rashi Sharma', 1),
+(1000, '12345678', 'Sakshi Sharma', 1001, '23456781', 'Rashi Sharma', 5),
+(1004, '45678123', 'Rajendra Tiwari', 1005, '56781234', 'Preeti Mishra', 400),
+(1005, '56781234', 'Preeti Mishra', 1007, '78123456', 'Amit Joshi', 100),
+(1007, '78123456', 'Amit Joshi', 1009, '01234567', 'Ankit Nagpura', 50),
+(1006, '67812345', 'Ridhim Singh', 1004, '45678123', 'Rajendra Tiwari', 200),
+(1004, '45678123', 'Rajendra Tiwari', 1007, '78123456', 'Amit Joshi', 10),
+(1007, '78123456', 'Amit Joshi', 1008, '81234567', 'Shubham Porwal', 20),
+(1008, '81234567', 'Shubham Porwal', 1003, '034567812', 'Aman Sahu', 50),
+(1007, '78123456', 'Amit Joshi', 1003, '034567812', 'Aman Sahu', 66),
+(1003, '034567812', 'Aman Sahu', 1008, '81234567', 'Shubham Porwal', 20),
+(1008, '81234567', 'Shubham Porwal', 1005, '56781234', 'Preeti Mishra', 499),
+(1005, '56781234', 'Preeti Mishra', 1009, '01234567', 'Ankit Nagpura', 67);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(4) NOT NULL,
+  `ac` varchar(10) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `no` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `amt` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `ac`, `name`, `no`, `email`, `amt`) VALUES
+(1000, '12345678', 'Sakshi Sharma', '6778899554', 'sakshi@gmail.com', 2459),
+(1001, '23456781', 'Rashi Sharma', '9878675645', 'rashi@gmail.com', 5040),
+(1002, '34567812', 'Ansh Sharma', '8787865598', 'ansh@gmail.com', 800),
+(1004, '45678123', 'Rajendra Tiwari', '9996665532', 'rajendra@gmail.com', 3790),
+(1005, '56781234', 'Preeti Mishra', '8877559944', 'preeti@gmail.com', 5732),
+(1006, '67812345', 'Ridhim Singh', '8989876763', 'rid@gmail.com', 8800),
+(1007, '78123456', 'Amit Joshi', '8976645889', 'amit@gmail.com', 4474),
+(1003, '034567812', 'Aman Sahu', '6677888443', 'aman@gmail.com', 2096),
+(1008, '81234567', 'Shubham Porwal', '6655009988', 'subh@gmail.com', 3291),
+(1009, '01234567', 'Ankit Nagpura', '6787859849', 'ank@gmail.com', 4767);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
